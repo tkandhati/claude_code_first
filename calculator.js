@@ -11,19 +11,20 @@ function multiply(a, b) {
 }
 
 function divide(a, b) {
-  return a / b;              // BUG 1: no zero check → returns Infinity
+  if (b === 0) throw new Error('Division by zero');
+  return a / b;
 }
 
 function percentage(a, b) {
-  return (a / b) / 100;      // BUG 2: should be * not /
+  return (a / b) * 100;
 }
 
 function power(base, exp) {
-  return base ^ exp;         // BUG 3: ^ means XOR in JS, not power!
+  return base ** exp;
 }
 
 function average(nums) {
-  return nums[0] / nums.length;  // BUG 4: not summing all numbers
+  return nums.reduce((sum, n) => sum + n, 0) / nums.length;
 }
 
 module.exports = {
