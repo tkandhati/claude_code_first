@@ -26,7 +26,12 @@ function average(nums) {
   return nums[0] / nums.length;  // BUG 4: not summing all numbers
 }
 
+function sqrt(n) {
+  if (n < 0) throw new Error('Cannot take square root of a negative number');
+  return Math.sqrt(n);
+}
+
 module.exports = {
   add, subtract, multiply,
-  divide, percentage, power, average
+  divide, percentage, power, average, sqrt
 };
