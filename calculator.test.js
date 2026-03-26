@@ -1,6 +1,6 @@
 const {
   add, subtract, multiply,
-  divide, percentage, power, average, sqrt
+  divide, percentage, power, average, sqrt, floor
 } = require('./calculator');
 
 test('add: 2 + 3 = 5', () => {
@@ -33,4 +33,24 @@ test('sqrt: sqrt(0) = 0', () => {
 
 test('sqrt: negative number throws error', () => {
   expect(() => sqrt(-1)).toThrow('Cannot take square root of a negative number');
+});
+
+test('floor: floor(4.7) = 4', () => {
+  expect(floor(4.7)).toBe(4);
+});
+
+test('floor: floor(4.1) = 4', () => {
+  expect(floor(4.1)).toBe(4);
+});
+
+test('floor: floor(-2.3) = -3', () => {
+  expect(floor(-2.3)).toBe(-3);
+});
+
+test('floor: floor(5) = 5', () => {
+  expect(floor(5)).toBe(5);
+});
+
+test('floor: floor(0) = 0', () => {
+  expect(floor(0)).toBe(0);
 });

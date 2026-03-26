@@ -31,7 +31,11 @@ function sqrt(n) {
   return Math.sqrt(n);
 }
 
+function floor(n) {
+  return Math.floor(n);
+}
+
 module.exports = {
   add, subtract, multiply,
-  divide, percentage, power, average, sqrt
+  divide, percentage, power, average, sqrt, floor
 };
