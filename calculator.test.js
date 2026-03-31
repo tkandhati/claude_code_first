@@ -1,6 +1,6 @@
 const {
   add, subtract, multiply,
-  divide, percentage, power, average, sqrt, floor
+  divide, percentage, power, average, sqrt, floor, ceil
 } = require('./calculator');
 
 test('add: 2 + 3 = 5', () => {
@@ -53,4 +53,24 @@ test('floor: floor(5) = 5', () => {
 
 test('floor: floor(0) = 0', () => {
   expect(floor(0)).toBe(0);
+});
+
+test('ceil: ceil(4.1) = 5', () => {
+  expect(ceil(4.1)).toBe(5);
+});
+
+test('ceil: ceil(4.7) = 5', () => {
+  expect(ceil(4.7)).toBe(5);
+});
+
+test('ceil: ceil(-2.3) = -2', () => {
+  expect(ceil(-2.3)).toBe(-2);
+});
+
+test('ceil: ceil(5) = 5', () => {
+  expect(ceil(5)).toBe(5);
+});
+
+test('ceil: ceil(0) = 0', () => {
+  expect(ceil(0)).toBe(0);
 });

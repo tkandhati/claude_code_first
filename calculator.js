@@ -35,7 +35,11 @@ function floor(n) {
   return Math.floor(n);
 }
 
+function ceil(n) {
+  return Math.ceil(n);
+}
+
 module.exports = {
   add, subtract, multiply,
-  divide, percentage, power, average, sqrt, floor
+  divide, percentage, power, average, sqrt, floor, ceil
 };
